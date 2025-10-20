@@ -1,0 +1,143 @@
+╔═══════════════════════════════════════════════════════════════╗
+║                                                               ║
+║    CÓMO ARREGLAR: "The executable is not codesigned"         ║
+║                                                               ║
+╚═══════════════════════════════════════════════════════════════╝
+
+CAUSA DEL PROBLEMA:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Estás intentando correr en tu iPhone FÍSICO, pero el proyecto
+no tiene configurado tu Apple ID para firmar la app.
+
+
+SOLUCIÓN RÁPIDA (Usa el Simulador):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. En Xcode, barra superior
+2. Click en: "00008130-0002512C1483401C" (tu iPhone)
+3. Cámbialo a: "iPhone 16 Pro" (simulador) 📱
+4. Presiona: ⌘ + R
+
+✅ ¡Listo! La app funcionará sin problemas.
+
+
+SOLUCIÓN COMPLETA (Para iPhone Físico):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PASO 1: Abrir Proyecto
+   cd ~/Desktop/GO/GoMaster
+   open GoMaster.xcodeproj
+
+PASO 2: Configurar Signing
+   
+   2.1 En Xcode, click en "GoMaster" (icono azul, navegador izquierdo)
+   
+   2.2 Selecciona target "GoMaster" (sección TARGETS)
+   
+   2.3 Click en pestaña "Signing & Capabilities"
+   
+   2.4 Marca: ☑️ "Automatically manage signing"
+   
+   2.5 En "Team": Selecciona tu Apple ID
+   
+       Si NO aparece tu Apple ID:
+       a) Xcode → Settings (⌘ + ,)
+       b) Accounts → Click "+"
+       c) Agregar tu Apple ID
+       d) Vuelve al paso 2.5
+
+PASO 3: Cambiar Bundle ID
+   
+   3.1 En "Bundle Identifier", cambia:
+       
+       DE:  com.gomaster.app
+       A:   com.TUNOMBRE.gomaster
+       
+       Ejemplos válidos:
+       - com.alex.gomaster
+       - com.mitre.go
+       - com.tunombre.juego
+
+PASO 4: Confiar en Desarrollador (Primera vez)
+   
+   4.1 En tu iPhone, ve a:
+       Settings → General → VPN & Device Management
+   
+   4.2 Busca tu Apple ID
+   
+   4.3 Tap en él
+   
+   4.4 Tap "Trust"
+
+PASO 5: Ejecutar
+   
+   5.1 En Xcode: ⌘ + Shift + K (limpiar)
+   
+   5.2 En Xcode: ⌘ + R (correr)
+   
+   5.3 Espera ~30 segundos
+   
+   5.4 ¡La app se abrirá en tu iPhone!
+
+
+VERIFICACIÓN:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+En "Signing & Capabilities" debes ver:
+
+   ✅ Automatically manage signing    [marcado]
+   ✅ Team: Tu Nombre (Personal Team) [seleccionado]
+   ✅ Signing Certificate: Apple Development
+   ✅ Provisioning Profile: Xcode Managed Profile
+
+Si ves ❌ en rojo, lee el mensaje de error y corrige.
+
+
+TROUBLESHOOTING:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❌ "No signing certificate found"
+   → Xcode → Settings → Accounts → Manage Certificates
+   → Click "+" → Apple Development
+
+❌ "Failed to register bundle identifier"
+   → Cambia el Bundle ID a algo más único
+   → Ejemplo: com.alex.gomaster123
+
+❌ "iPhone is locked"
+   → Desbloquea tu iPhone
+   → Mantén la pantalla encendida
+
+❌ "This device is not registered"
+   → Usa el simulador en su lugar
+   → O espera ~5 min y reintenta
+
+
+RESUMEN:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Para SIMULADOR (Fácil, rápido, sin configuración):
+   1. Selector de dispositivo → "iPhone 16 Pro"
+   2. ⌘ + R
+   ✅ Funciona inmediatamente
+
+Para IPHONE REAL (Requiere Apple ID):
+   1. Signing & Capabilities → Team → Tu Apple ID
+   2. Bundle ID → com.tunombre.gomaster
+   3. iPhone → Settings → Trust Developer
+   4. ⌘ + Shift + K, luego ⌘ + R
+   ✅ Se instala en tu iPhone
+
+
+AYUDA:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Guías detalladas:
+- SIGNING_GUIDE.md (completa)
+- ABRIR_EN_XCODE.md (paso a paso)
+- ./setup-signing.sh (script interactivo)
+
+╔═══════════════════════════════════════════════════════════════╗
+║  El simulador funciona IGUAL que el iPhone real para probar  ║
+║  Solo usa iPhone físico si necesitas cámara o GPS            ║
+╚═══════════════════════════════════════════════════════════════╝
