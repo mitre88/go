@@ -1,0 +1,130 @@
+/*
+  Localizable.strings
+  GoMaster
+
+  English localization
+*/
+
+/* Main App */
+"app.name" = "GoMaster";
+"app.tagline" = "The Ancient Art of Go";
+
+/* Game */
+"game.title" = "Game";
+"game.new" = "New Game";
+"game.pass" = "Pass";
+"game.resign" = "Resign";
+"game.undo" = "Undo";
+"game.your_turn" = "Your Turn";
+"game.ai_thinking" = "AI thinking...";
+"game.black" = "Black";
+"game.white" = "White";
+"game.you" = "You";
+"game.ai" = "AI";
+
+/* Board Sizes */
+"board.size.9" = "9×9 - Quick";
+"board.size.13" = "13×13 - Medium";
+"board.size.19" = "19×19 - Traditional";
+
+/* Difficulty */
+"difficulty.beginner" = "Beginner";
+"difficulty.intermediate" = "Intermediate";
+"difficulty.advanced" = "Advanced";
+"difficulty.expert" = "Expert";
+"difficulty.master" = "Master";
+
+"difficulty.desc.beginner" = "Perfect for starting";
+"difficulty.desc.intermediate" = "Moderate challenge";
+"difficulty.desc.advanced" = "Requires experience";
+"difficulty.desc.expert" = "Very difficult";
+"difficulty.desc.master" = "Go Master";
+
+/* Game Over */
+"gameover.victory" = "Victory!";
+"gameover.defeat" = "Defeat";
+"gameover.game_over" = "Game Over";
+"gameover.close" = "Close";
+"gameover.new_game" = "New Game";
+
+/* Score */
+"score.final" = "Final Score";
+"score.territory" = "Territory";
+"score.captures" = "Captures";
+"score.black_wins" = "Black wins by %.1f points";
+"score.white_wins" = "White wins by %.1f points";
+"score.draw" = "Draw";
+
+/* Scores View */
+"scores.title" = "Scores";
+"scores.statistics" = "Statistics";
+"scores.recent_games" = "Recent Games";
+"scores.total_games" = "Games";
+"scores.wins" = "Wins";
+"scores.losses" = "Losses";
+"scores.win_rate" = "Win Rate";
+"scores.clear" = "Clear";
+"scores.empty" = "No games recorded";
+"scores.victory" = "Victory";
+"scores.defeat" = "Defeat";
+
+/* Settings */
+"settings.title" = "Settings";
+"settings.game" = "Game Settings";
+"settings.board_size" = "Board Size";
+"settings.ai_difficulty" = "AI Difficulty";
+"settings.audio" = "Audio";
+"settings.sounds" = "Sounds";
+"settings.about" = "About";
+"settings.version" = "Version";
+"settings.developer" = "Developer";
+"settings.rules" = "Go Rules";
+
+/* Rules */
+"rules.1" = "Players alternate placing stones on board intersections.";
+"rules.2" = "A stone or group without liberties (adjacent empty intersections) is captured and removed.";
+"rules.3" = "Ko: The previous board position cannot be immediately repeated.";
+"rules.4" = "The game ends when both players pass consecutively.";
+"rules.5" = "Score is calculated by adding territory and captures. The player with the most points wins.";
+
+/* New Game */
+"newgame.title" = "New Game";
+"newgame.subtitle" = "Configure your next challenge";
+"newgame.board_size" = "Board Size";
+"newgame.difficulty" = "AI Difficulty";
+"newgame.start" = "Start Game";
+"newgame.cancel" = "Cancel";
+
+/* Notifications */
+"notification.daily_reminder.title" = "GoMaster";
+"notification.daily_reminder.body" = "Ready for a game of Go?";
+"notification.permission" = "GoMaster will send you reminders so you don't forget your daily game.";
+
+/* Accessibility */
+"accessibility.board" = "Go Board";
+"accessibility.stone.black" = "Black stone";
+"accessibility.stone.white" = "White stone";
+"accessibility.intersection" = "Intersection %d, %d";
+"accessibility.place_stone" = "Place stone at %d, %d";
+"accessibility.empty_intersection" = "Empty intersection";
+"accessibility.last_move" = "Last move";
+"accessibility.captured" = "Captured";
+
+/* Alerts */
+"alert.error" = "Error";
+"alert.ok" = "OK";
+"alert.cancel" = "Cancel";
+"alert.confirm" = "Confirm";
+
+/* Tutorial */
+"tutorial.welcome" = "Welcome to GoMaster";
+"tutorial.tap_to_place" = "Tap an intersection to place a stone";
+"tutorial.capture_stones" = "Capture opponent's stones by surrounding them";
+"tutorial.build_territory" = "Build territory by controlling areas of the board";
+"tutorial.got_it" = "Got it";
+
+/* Errors */
+"error.invalid_move" = "Invalid move";
+"error.occupied" = "This position is occupied";
+"error.ko_rule" = "Move prohibited by Ko rule";
+"error.suicide" = "Cannot place a stone without liberties";

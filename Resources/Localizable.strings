@@ -1,0 +1,130 @@
+/*
+  Localizable.strings
+  GoMaster
+
+  Spanish localization
+*/
+
+/* Main App */
+"app.name" = "GoMaster";
+"app.tagline" = "El Arte Milenario del Go";
+
+/* Game */
+"game.title" = "Juego";
+"game.new" = "Nueva Partida";
+"game.pass" = "Pasar";
+"game.resign" = "Rendirse";
+"game.undo" = "Deshacer";
+"game.your_turn" = "Tu Turno";
+"game.ai_thinking" = "IA pensando...";
+"game.black" = "Negras";
+"game.white" = "Blancas";
+"game.you" = "Tú";
+"game.ai" = "IA";
+
+/* Board Sizes */
+"board.size.9" = "9×9 - Rápido";
+"board.size.13" = "13×13 - Medio";
+"board.size.19" = "19×19 - Tradicional";
+
+/* Difficulty */
+"difficulty.beginner" = "Principiante";
+"difficulty.intermediate" = "Intermedio";
+"difficulty.advanced" = "Avanzado";
+"difficulty.expert" = "Experto";
+"difficulty.master" = "Maestro";
+
+"difficulty.desc.beginner" = "Ideal para comenzar";
+"difficulty.desc.intermediate" = "Desafío moderado";
+"difficulty.desc.advanced" = "Requiere experiencia";
+"difficulty.desc.expert" = "Muy difícil";
+"difficulty.desc.master" = "Maestro del Go";
+
+/* Game Over */
+"gameover.victory" = "¡Victoria!";
+"gameover.defeat" = "Derrota";
+"gameover.game_over" = "Fin del Juego";
+"gameover.close" = "Cerrar";
+"gameover.new_game" = "Nueva Partida";
+
+/* Score */
+"score.final" = "Puntuación Final";
+"score.territory" = "Territorio";
+"score.captures" = "Capturas";
+"score.black_wins" = "Negras ganan por %.1f puntos";
+"score.white_wins" = "Blancas ganan por %.1f puntos";
+"score.draw" = "Empate";
+
+/* Scores View */
+"scores.title" = "Marcadores";
+"scores.statistics" = "Estadísticas";
+"scores.recent_games" = "Partidas Recientes";
+"scores.total_games" = "Partidas";
+"scores.wins" = "Victorias";
+"scores.losses" = "Derrotas";
+"scores.win_rate" = "Tasa de Victoria";
+"scores.clear" = "Limpiar";
+"scores.empty" = "No hay partidas registradas";
+"scores.victory" = "Victoria";
+"scores.defeat" = "Derrota";
+
+/* Settings */
+"settings.title" = "Ajustes";
+"settings.game" = "Configuración del Juego";
+"settings.board_size" = "Tamaño del Tablero";
+"settings.ai_difficulty" = "Dificultad IA";
+"settings.audio" = "Audio";
+"settings.sounds" = "Sonidos";
+"settings.about" = "Acerca de";
+"settings.version" = "Versión";
+"settings.developer" = "Desarrollador";
+"settings.rules" = "Reglas del Go";
+
+/* Rules */
+"rules.1" = "Los jugadores colocan piedras alternadamente en las intersecciones del tablero.";
+"rules.2" = "Una piedra o grupo sin libertades (intersecciones vacías adyacentes) es capturada y removida.";
+"rules.3" = "Ko: No se puede repetir inmediatamente la posición anterior del tablero.";
+"rules.4" = "El juego termina cuando ambos jugadores pasan consecutivamente.";
+"rules.5" = "La puntuación se calcula sumando territorio y capturas. El jugador con más puntos gana.";
+
+/* New Game */
+"newgame.title" = "Nueva Partida";
+"newgame.subtitle" = "Configura tu próximo desafío";
+"newgame.board_size" = "Tamaño del Tablero";
+"newgame.difficulty" = "Dificultad de la IA";
+"newgame.start" = "Comenzar Partida";
+"newgame.cancel" = "Cancelar";
+
+/* Notifications */
+"notification.daily_reminder.title" = "GoMaster";
+"notification.daily_reminder.body" = "¿Listo para una partida de Go?";
+"notification.permission" = "GoMaster te enviará recordatorios para que no olvides jugar tu partida diaria.";
+
+/* Accessibility */
+"accessibility.board" = "Tablero de Go";
+"accessibility.stone.black" = "Piedra negra";
+"accessibility.stone.white" = "Piedra blanca";
+"accessibility.intersection" = "Intersección %d, %d";
+"accessibility.place_stone" = "Colocar piedra en %d, %d";
+"accessibility.empty_intersection" = "Intersección vacía";
+"accessibility.last_move" = "Última jugada";
+"accessibility.captured" = "Capturada";
+
+/* Alerts */
+"alert.error" = "Error";
+"alert.ok" = "OK";
+"alert.cancel" = "Cancelar";
+"alert.confirm" = "Confirmar";
+
+/* Tutorial */
+"tutorial.welcome" = "Bienvenido a GoMaster";
+"tutorial.tap_to_place" = "Toca una intersección para colocar una piedra";
+"tutorial.capture_stones" = "Captura las piedras del oponente rodeándolas";
+"tutorial.build_territory" = "Construye territorio controlando áreas del tablero";
+"tutorial.got_it" = "Entendido";
+
+/* Errors */
+"error.invalid_move" = "Movimiento inválido";
+"error.occupied" = "Esta posición está ocupada";
+"error.ko_rule" = "Movimiento prohibido por la regla Ko";
+"error.suicide" = "No puedes colocar una piedra sin libertades";
