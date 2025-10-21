@@ -16,8 +16,10 @@ struct GoBoardView: View {
 
     var body: some View {
         GeometryReader { geometry in
-            let size = min(geometry.size.width, geometry.size.height)
-            let cellSize = size / CGFloat(gameState.boardSize + 1)
+            // Use more screen space - multiply by 0.95 for better sizing
+            let size = min(geometry.size.width, geometry.size.height) * 0.95
+            // Reduce padding - use smaller divisor
+            let cellSize = size / (CGFloat(gameState.boardSize) + 0.5)
 
             ZStack {
                 // Board background

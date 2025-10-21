@@ -23,8 +23,7 @@ final class GoAIEngine: @unchecked Sendable {
         for gameEngine: GoGameEngine,
         color: StoneColor
     ) async -> BoardPosition? {
-        // Simulate thinking time based on difficulty
-        try? await Task.sleep(nanoseconds: UInt64(difficulty.thinkingTime * 1_000_000_000))
+        // NO artificial delay - respond immediately
 
         let legalMoves = gameEngine.getLegalMoves()
         guard !legalMoves.isEmpty else { return nil }
@@ -103,13 +102,13 @@ final class GoAIEngine: @unchecked Sendable {
         gameEngine: GoGameEngine,
         color: StoneColor
     ) async -> BoardPosition? {
-        // Expert: Monte Carlo Tree Search simulation
-        let simulations = difficulty == .master ? 1000 : (difficulty == .expert ? 500 : 200)
+        // Expert: Monte Carlo Tree Search simulation - OPTIMIZED for speed
+        let simulations = difficulty == .master ? 100 : (difficulty == .expert ? 50 : 30)
 
         var moveScores: [BoardPosition: Double] = [:]
 
-        // Run parallel simulations for top candidate moves
-        let topCandidates = selectTopCandidates(legalMoves, gameEngine: gameEngine, color: color, count: min(15, legalMoves.count))
+        // Run parallel simulations for top candidate moves - reduced for speed
+        let topCandidates = selectTopCandidates(legalMoves, gameEngine: gameEngine, color: color, count: min(8, legalMoves.count))
 
         await withTaskGroup(of: (BoardPosition, Double).self) { group in
             for move in topCandidates {
