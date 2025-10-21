@@ -8,7 +8,7 @@
 import Foundation
 import GameplayKit
 
-final class GoAIEngine {
+final class GoAIEngine: @unchecked Sendable {
     private let difficulty: DifficultyLevel
     private let boardSize: Int
 

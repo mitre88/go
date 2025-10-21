@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class GoGameEngine {
+final class GoGameEngine: @unchecked Sendable {
     private var state: GameState
 
     init(boardSize: Int = 19) {

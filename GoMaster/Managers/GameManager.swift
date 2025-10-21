@@ -27,9 +27,10 @@ final class GameManager: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
 
     init() {
-        self.gameEngine = GoGameEngine(boardSize: 19)
+        let engine = GoGameEngine(boardSize: 19)
+        self.gameEngine = engine
         self.aiEngine = GoAIEngine(difficulty: .expert, boardSize: 19)
-        self.gameState = gameEngine.currentState
+        self.gameState = engine.currentState
         loadScores()
     }
 
@@ -120,9 +121,13 @@ final class GameManager: ObservableObject {
         // Small delay for UI feedback
         try? await Task.sleep(nanoseconds: 300_000_000)
 
-        let aiMove = await aiEngine.calculateBestMove(
-            for: gameEngine,
-            color: gameState.currentPlayer
+        let currentAI = aiEngine
+        let currentEngine = gameEngine
+        let currentPlayer = gameState.currentPlayer
+
+        let aiMove = await currentAI.calculateBestMove(
+            for: currentEngine,
+            color: currentPlayer
         )
 
         if let move = aiMove {
